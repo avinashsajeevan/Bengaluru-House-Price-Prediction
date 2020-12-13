@@ -20,8 +20,6 @@ def prediction(Location, total_sqft, bath, bhk):
         x[loc_index] = 1
    return model.predict([x])[0]
     # Making predictions
-    prediction_price = model.predict_price(Location, total_sqft, bath, bhk)
-    return prediction_price
 
 
 # this is the main function in which we define our webpage

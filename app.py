@@ -10,7 +10,15 @@ model = pickle.load(pickle_in)
 
 # defining the function which will make the prediction using the data which the user inputs
 def prediction(Location, total_sqft, bath, bhk):
-
+    
+    loc_index = np.where(x.columns==Location)[0][0]
+    x = np.zeros(len(x.columns))
+    x[0] = sqft
+    x[1] = bath
+    x[2] = bhk
+    if loc_index >= 0:
+        x[loc_index] = 1
+   return model.predict([x])[0]
     # Making predictions
     prediction_price = model.predict_price(Location, total_sqft, bath, bhk)
     return prediction_price

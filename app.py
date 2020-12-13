@@ -39,8 +39,8 @@ def get_estimated_price(location,sqft,bhk,bath):
 def run():
     # front end elements of the web page
     html_temp = """ 
-    <div style ="background-color:yellow;padding:13px"> 
-    <h1 style ="color:black;text-align:center;">Streamlit Bengaluru Home Price Prediction </h1> 
+    <div style ="background-color:orange;padding:13px"> 
+    <h1 style ="color:black;text-align:center;"> Bengaluru Home Price Prediction </h1> 
     </div> 
     """
 
